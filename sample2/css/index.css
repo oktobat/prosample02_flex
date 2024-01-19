@@ -1,0 +1,491 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&family=Noto+Sans+KR:wght@100;200;300;400;500&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.row {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+#header {
+  border: 0px solid #000;
+  background: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99;
+}
+#header h1 {
+  float: left;
+  border: 0px solid #000;
+  padding: 20px 0;
+}
+#header .menuopen {
+  display: none;
+}
+#header #nav {
+  float: right;
+}
+#header #nav .depth1 > li {
+  float: left;
+  font-size: 14px;
+  color: #000;
+  font-family: "Noto Sans KR";
+  font-weight: 900;
+  margin-left: 30px;
+  position: relative;
+}
+#header #nav .depth1 > li > a {
+  height: 88.3px;
+  line-height: 88.3px;
+  display: block;
+  padding: 0 25px 0 15px;
+  position: relative;
+}
+#header #nav .depth1 > li:nth-child(1) > a::after,
+#header #nav .depth1 > li:nth-child(4) > a::after {
+  display: block;
+  position: absolute;
+  top: 2px;
+  right: 10px;
+  font-size: 10px;
+  font-family: "FontAwesome";
+  content: "\f107";
+  opacity: 0.3;
+}
+#header #nav .depth1 > li > a:hover {
+  background: rgba(0, 0, 0, 0.03);
+}
+#header #nav .depth1 > li:hover .depth2 {
+  display: block;
+}
+#header #nav .depth2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background: #333;
+  color: #fff;
+  font-size: 13px;
+  font-family: "Noto Sans KR";
+  font-weight: 300;
+  display: none;
+}
+#header #nav .depth2 > li > a {
+  display: block;
+  padding: 7px 15px;
+  background: rgba(0, 0, 0, 0.05);
+}
+#header #nav .depth2 > li > a:hover {
+  display: block;
+  padding: 7px 15px;
+  background: rgba(0, 0, 0, 0.15);
+}
+
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+}
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  width: 16px;
+  height: 16px;
+  text-indent: 9999px;
+  overflow: hidden;
+  background: rgba(0, 0, 0, 0.5);
+  border: 5px solid transparent;
+  border-radius: 50%;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  background: #fff;
+  border: 5px solid #000;
+}
+
+/* 슬라이더 자동재생멈춤 버튼 */
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  font-size: 20px;
+  color: #000;
+  margin-left: 50px;
+}
+
+#section .slideOuter .slide {
+  position: relative;
+  /* background-image: url(../image/mainslide1.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover; */
+  /* 배경이미지는 높이가 있어야 보임. 100vh는 화면이랑 같은 높이를 뜻함 */
+  height: 60vw;
+}
+#section .slideOuter .slide1 {
+  background: url(../image/mainslide1.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide2 {
+  background: url(../image/mainslide2.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide3 {
+  background: url(../image/mainslide3.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide4 {
+  background: url(../image/mainslide4.jpg) no-repeat center / cover;
+}
+#section .slideOuter .slide .text {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  text-align: center;
+  color: #fff;
+}
+#section .slideOuter .slide .text p {
+  font-size: 20px;
+  word-break: keep-all;
+}
+#section .slideOuter .slide .text h2 {
+  font-size: 5vw;
+  margin: 30px 0 50px;
+}
+#section .slideOuter .slide .text a {
+  padding: 10px 16px;
+  font-size: 18px;
+  border: 2px solid #fff;
+  border-radius: 3px;
+}
+
+#section .ourcompany {
+  padding: 50px 0 80px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+#section .ourcompany h2 {
+  font-size: 26px;
+  font-family: "Nanum Gothic", sans-serif;
+  color: #414141;
+  padding-bottom: 10px;
+  text-align: center;
+}
+#section .ourcompany p.slogun {
+  font-size: 14px;
+  color: #666;
+  margin: 1.4px 0 30px;
+  text-align: center;
+}
+#section .ourcompany ul {
+  overflow: hidden;
+}
+#section .ourcompany ul li {
+  float: left;
+  width: 33.33%;
+  padding: 0 15px;
+}
+#section .ourcompany ul li h3 {
+  font-size: 22px;
+  color: #414141;
+  margin: 20px 0 32px;
+  font-weight: normal;
+}
+#section .ourcompany ul li p {
+  font-size: 14px;
+  color: #666;
+  margin: 1.4px 0 30px;
+}
+#section .ourcompany ul li a {
+  display: inline-block;
+  font-size: 12px;
+  color: #222;
+  padding: 10px 30px;
+  border: 1px solid #222;
+  transition: all 0.2s;
+  border-radius: 2px;
+}
+#section .ourcompany ul li a:hover {
+  color: #fff;
+  background: #000;
+}
+#section .ourcompany ul li div.photo {
+  overflow: hidden;
+}
+#section .ourcompany ul li img {
+  transition: all 0.2s;
+}
+#section .ourcompany ul li img:hover {
+  transform: scale(1.1);
+}
+
+#section .product {
+  padding: 50px 0;
+  text-align: center;
+}
+#section .product .title h2 {
+  color: #414141;
+  font-size: 36px;
+}
+#section .product .title p {
+  color: #666;
+  font-size: 14px;
+  margin: 10px 0 30px;
+}
+#section .product .title a {
+  /* inline요소인 a는 margin 상하값이 적용이 안되므로 block 속성을 추가하여 문제를 해결함 */
+  display: inline-block;
+  color: #222;
+  font-size: 12px;
+  margin: 0 0 40px;
+  padding: 10px 30px;
+  border: 1px solid #000;
+  border-radius: 2px;
+  transition: all 0.2s;
+}
+#section .product .title a:hover {
+  color: #fff;
+  background: #000;
+}
+
+#section .product ul.best {
+  overflow: hidden;
+}
+#section .product ul.best li {
+  float: left;
+  width: 33.33%;
+  padding: 0 5px;
+}
+#section .product ul.best li h3 {
+  font-size: 13px;
+  color: #333;
+  padding: 26px 0 13px;
+}
+#section .product ul.best li p {
+  font-size: 12px;
+  color: #999;
+}
+#section .product ul.best li .photo img {
+  transition: all 0.5s;
+}
+#section .product ul.best li .photo img:hover {
+  opacity: 0.6;
+}
+
+#section .notice {
+  background: url(../image/mainbrand3-min.jpg) center / cover;
+  background-attachment: fixed;
+  height: 456px;
+  position: relative;
+}
+#section .notice .overlay {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8);
+}
+#section .notice .slideOuter2 {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+}
+#section .notice .slideOuter2 .slide2 {
+  color: #fff;
+  text-align: center;
+}
+#section .notice .slideOuter2 .slide2 .text h2 {
+  font-size: 50px;
+}
+#section .notice .slideOuter2 .slide2 .text h3 {
+  font-size: 24px;
+  margin: 32px 0;
+}
+#section .notice .slideOuter2 .slide2 .text p {
+  font-size: 14px;
+  margin: 0 0 35px;
+}
+#section .notice .slideOuter2 .slide2 .text a {
+  font-size: 12px;
+  padding: 10px 30px;
+  border: 1px solid #fff;
+  border-radius: 2px;
+  display: inline-block;
+}
+#section .notice .slideOuter2 .slick-dots {
+  text-align: center;
+  margin-top: 20px;
+}
+#section .notice .slideOuter2 .slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#section .notice .slideOuter2 .slick-dots li button {
+  width: 20px;
+  height: 5px;
+  background: #869791;
+  border: none;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+#section .notice .slideOuter2 .slick-dots li.slick-active button {
+  background: #179bd7;
+}
+
+/* 슬라이드2 도트버튼 스타일 */
+
+#section .companyinfo {
+  padding: 50px 0;
+}
+#section .companyinfo ul {
+  overflow: hidden;
+}
+#section .companyinfo ul li {
+  float: left;
+  width: 25%;
+  color: #fff;
+  padding: 20px 15px;
+  text-align: center;
+}
+#section .companyinfo ul li:nth-child(1) {
+  background: #72c9c3;
+}
+#section .companyinfo ul li:nth-child(2) {
+  background: #364759;
+}
+#section .companyinfo ul li:nth-child(3) {
+  background: #e0e1e1;
+  color: #222;
+}
+#section .companyinfo ul li:nth-child(4) {
+  background: #307cae;
+}
+
+#section .companyinfo ul li > a {
+  height: 260px;
+  display: inline-block;
+}
+#section .companyinfo ul li > a h2 {
+  font-size: 30px;
+  margin: 30px 0;
+}
+#section .companyinfo ul li > a p {
+  font-size: 14px;
+  margin: 30px 0;
+  letter-spacing: -0.5px;
+  height: 54px;
+}
+#section .contact {
+  padding: 50px 0;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+#section .contact h2 {
+  font-size: 36px;
+  color: #414141;
+  margin: 0 0 50px;
+}
+#section .contact .position {
+  font-size: 14px;
+  color: #444;
+}
+#section .contact .position h3 {
+  font-size: 26px;
+  color: #414141;
+  margin: 50px 0 0;
+}
+#section .contact .position .addr {
+  color: #666;
+  margin: 2px 0 30px;
+}
+#section .contact .sns {
+  text-align: center;
+}
+#section .contact .sns a {
+  display: inline-block;
+  width: 44px;
+  height: 44px;
+  line-height: 44px;
+  border-radius: 50%;
+  background: #32343e;
+  color: #fff;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px 5px;
+}
+
+#footer {
+  padding: 40px 0;
+  background: #ededed;
+  text-align: center;
+  font-size: 12px;
+}
+#footer h1 {
+  font-size: 14px;
+}
+#footer address {
+  font-style: normal;
+  margin: 20px 0 10px;
+}
+#footer address p {
+  line-height: 1.5em;
+}
+#footer address p span {
+  margin: 0 10px;
+}
+#footer address p:nth-child(2) span:nth-child(4) {
+  display: block;
+}

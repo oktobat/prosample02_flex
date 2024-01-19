@@ -1,0 +1,406 @@
+/* index.css */
+
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Noto Sans KR", sans-serif;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.row {
+  max-width: 1220px;
+  margin: 0 auto;
+}
+
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+/* ============================================================ */
+
+#header {
+  background-color: #fff;
+}
+
+#header .row h1 {
+  float: left;
+  padding: 10px 0;
+}
+
+#header .row .menuopen {
+  display: none;
+}
+
+#header .row #nav {
+  float: right;
+}
+
+#header .row #nav ul.depth1 > li {
+  float: left;
+  position: relative;
+  text-align: center;
+  margin-left: 12px;
+}
+
+#header .row #nav ul.depth1 > li > a {
+  font-size: 17px;
+  font-weight: bold;
+  padding: 0px 22px;
+  display: block;
+  color: #333;
+  height: 85px;
+  line-height: 85px;
+}
+
+#header .row #nav ul.depth1 > li:hover > ul.depth2 {
+  display: block;
+}
+
+#header .row #nav ul.depth2 {
+  display: none;
+  position: absolute;
+  top: 100%;
+  width: 100%;
+  text-align: left;
+  z-index: 999;
+}
+
+#header .row #nav ul.depth2 > li > a {
+  display: block;
+  padding: 12px 0 12px 22px;
+  font-size: 14px;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(132, 132, 132, 0.15);
+  background-color: #fff;
+  color: #333;
+  transition: all 0.3s;
+}
+
+#header .row #nav ul.depth2 > li > a:hover {
+  background-color: #000;
+  color: #fff;
+}
+
+/* ============================================================ */
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  transform: translate(-50%);
+}
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  width: 9px;
+  height: 9px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+  text-indent: 9999px;
+  overflow: hidden;
+  border: none;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  background: rgba(255, 255, 255, 1);
+}
+
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  font-size: 15px;
+  color: #fff;
+  margin-left: 50px;
+}
+
+#section .homemain {
+  width: 100%;
+  background-color: gray;
+}
+#section .homemain .slide {
+  height: 700px;
+  position: relative;
+}
+#section .homemain .slide1 {
+  background: url(../image/main01.jpg) center / cover;
+}
+#section .homemain .slide2 {
+  background: url(../image/main02.jpg) center / cover;
+}
+#section .homemain .slide3 {
+  background: url(../image/main03.jpg) center / cover;
+}
+#section .homemain .slide4 {
+  background: url(../image/main04.jpg) center / cover;
+}
+
+#section .homemain .textbox {
+  position: absolute;
+  display: inline-block;
+  color: white;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+#section .homemain .textbox > h2 {
+  font-size: 35px;
+  padding: 20px 0;
+}
+#section .homemain .textbox > p {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+/* ============================================================ */
+
+#section .about {
+  padding: 100px 0;
+  text-align: center;
+  color: #333;
+}
+
+#section .about .textbox {
+  padding-bottom: 40px;
+}
+
+#section .about .textbox > h2 {
+  font-size: 40px;
+  font-weight: 400;
+}
+
+#section .about .textbox > p {
+  font-size: 15px;
+  margin: 20px 0 0;
+}
+
+#section .about .imagebox {
+  display: block;
+  width: 100%;
+}
+
+#section .about .imagebox > li {
+  float: left;
+  width: 33.33%;
+  padding: 0 16px;
+}
+
+#section .about .imagebox > li > h3 {
+  font-weight: 400;
+}
+
+#section .about .imagebox > li > img {
+  margin: 30px 0;
+  opacity: 1;
+  transform: scale(1);
+  transition: all 0.5s;
+}
+#section .about .imagebox > li > img:hover {
+  opacity: 0.7;
+  transform: scale(0.99, 0.99);
+}
+
+#section .about .imagebox > li > p {
+  margin: 20px 0 30px;
+  font-size: 14px;
+}
+
+#section .about .imagebox > li > a {
+  display: block;
+  color: #000;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+/* ============================================================ */
+#section .creative {
+  overflow: hidden;
+  padding: 100px 0;
+  background: #fafafa;
+}
+#section .creative .videoBox {
+  float: left;
+  width: 50%;
+}
+#section .creative .videoBox video {
+  width: 100%;
+}
+#section .creative .text {
+  float: left;
+  width: 50%;
+  padding: 20px 100px;
+}
+
+#section .creative .text h2 {
+  font-size: 40px;
+  line-height: 1.2em;
+}
+#section .creative .text h2 span {
+  display: block;
+}
+#section .creative .text p {
+  font-size: 14px;
+  /* 단어잘림 허용안함 */
+  word-break: keep-all;
+  line-height: 1.5em;
+  padding-right: 100px;
+}
+#section .creative .text p strong {
+  display: block;
+  font-size: 20px;
+  margin: 40px 0;
+}
+#section .creative .text a {
+  display: block;
+  margin-top: 50px;
+}
+
+/* ============================================================ */
+#section .business {
+  padding: 120px 0;
+  text-align: center;
+}
+
+#section .business h2 {
+  font-size: 40px;
+}
+#section .business p.text {
+  font-size: 15px;
+  line-height: 2em;
+  margin: 20px 0 80px;
+}
+#section .business ul {
+  overflow: hidden;
+}
+#section .business ul li {
+  float: left;
+  width: 20%;
+  padding: 10px;
+}
+#section .business ul li > a {
+  display: block;
+  overflow: hidden;
+  position: relative;
+}
+#section .business ul li > a .overbox {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  padding-top: 60%;
+  opacity: 0;
+  transition: all 0.5s;
+}
+#section .business ul li:hover > a .overbox {
+  opacity: 1;
+}
+
+#section .business ul li img {
+  transition: all 0.5s;
+  transform-origin: center top;
+}
+#section .business ul li:hover img {
+  transform: scale(1.1);
+}
+
+/* ============================================================ */
+#section .best {
+  background: url(../image/banner04.jpg) right center / cover;
+  height: 580px;
+  text-align: center;
+  padding-top: 100px;
+}
+
+/* ============================================================ */
+#section .contact {
+  margin-top: -200px;
+}
+#section .contact .row {
+  overflow: hidden;
+}
+#section .contact .map {
+  float: left;
+  width: 50%;
+}
+#section .contact .query {
+  float: left;
+  width: 50%;
+  background: #fff;
+  height: 450px;
+}
+
+/* ============================================================ */
+#footer {
+  margin-top: 50px;
+  padding: 50px 0;
+  border-top: 1px solid #d4d4d4;
+}
+#footer .row {
+  overflow: hidden;
+}
+#footer .btmlogo {
+  float: left;
+}
+#footer .btmmenu {
+  float: right;
+}
+#footer .btmmenu {
+  overflow: hidden;
+}
+#footer .btmmenu .companyinfo {
+  float: left;
+}
+#footer .btmmenu .sns {
+  float: right;
+  margin-left: 50px;
+}

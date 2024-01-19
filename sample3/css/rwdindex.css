@@ -1,0 +1,184 @@
+@media screen and (max-width: 1220px) {
+  .row {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #header {
+    background-color: #fff;
+  }
+  #header .row {
+    padding: 0;
+  }
+
+  #header .row h1 {
+    float: left;
+    padding: 10px 0 10px 50px;
+  }
+
+  #header .row .menuopen {
+    float: right;
+    display: block;
+    height: 85px;
+    line-height: 85px;
+    font-size: 25px;
+    margin-right: 50px;
+  }
+
+  #header .row #nav {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+
+  #header .row #nav ul.depth1 > li {
+    float: none;
+    position: relative;
+    text-align: left;
+    margin-left: 0px;
+  }
+
+  #header .row #nav ul.depth1 > li > a {
+    font-size: 17px;
+    font-weight: bold;
+    padding: 0px 50px;
+    display: block;
+    color: #333;
+    height: auto;
+    line-height: 50px;
+    border-top: 1px solid rgba(132, 132, 132, 0.15);
+  }
+  #header .row #nav ul.depth1 > li:hover > a {
+    background: #000;
+    color: #fff;
+  }
+  #header .row #nav ul.depth1 > li > a::after {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 50px;
+    font-size: 10px;
+    font-family: "FontAwesome";
+    content: "\f107";
+    opacity: 0.3;
+  }
+
+  #header .row #nav ul.depth1 > li:hover > ul.depth2 {
+    display: block;
+  }
+
+  #header .row #nav ul.depth2 {
+    display: none;
+    position: static;
+    top: 100%;
+    width: 100%;
+    text-align: left;
+    z-index: 999;
+  }
+
+  #header .row #nav ul.depth2 > li > a {
+    display: block;
+    padding: 12px 0 12px 50px;
+    font-size: 14px;
+    font-weight: 600;
+    border-bottom: 0px solid rgba(132, 132, 132, 0.15);
+    border-top: 1px solid rgba(132, 132, 132, 0.15);
+    background-color: #fff;
+    color: #333;
+    transition: all 0.3s;
+  }
+
+  #header .row #nav ul.depth2 > li > a:hover {
+    background-color: #000;
+    color: #fff;
+  }
+
+  /* about us */
+  #section .about .imagebox > li {
+    float: left;
+    width: 100%;
+    padding: 0 16px;
+    margin-bottom: 20px;
+  }
+
+  /* creative best design */
+  #section .creative {
+    overflow: hidden;
+    padding: 0px 0;
+    background: #fafafa;
+  }
+  #section .creative .videoBox {
+    float: left;
+    width: 100%;
+  }
+  #section .creative .text {
+    float: left;
+    width: 100%;
+    padding: 20px 20px;
+  }
+
+  /* business 구역 */
+  #section .business {
+    padding: 60px 0;
+    text-align: center;
+  }
+  #section .business p.text {
+    font-size: 15px;
+    line-height: 2em;
+    margin: 20px 0 20px;
+  }
+  #section .business ul li {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+
+  #section .business ul li img {
+    transition: all 0.5s;
+    transform-origin: center top;
+    width: 100%;
+  }
+
+  /* contact 구역 */
+  #section .contact .map {
+    float: left;
+    width: 100%;
+  }
+  #section .contact .query {
+    float: left;
+    width: 100%;
+    background: #fff;
+    height: auto;
+    padding: 60px 0;
+  }
+
+  /* footer 구역 */
+  #footer .btmlogo {
+    float: left;
+    width: 100%;
+  }
+  #footer .btmmenu {
+    float: right;
+    width: 100%;
+  }
+
+  #footer .btmmenu .companyinfo {
+    float: left;
+    width: 100%;
+    margin: 20px 0;
+  }
+  #footer .btmmenu .sns {
+    float: right;
+    width: 100%;
+    margin-left: 50px;
+  }
+  #footer span {
+    display: block;
+  }
+  #footer span.slash {
+    display: none;
+  }
+}

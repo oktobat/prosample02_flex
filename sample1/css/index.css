@@ -1,0 +1,361 @@
+@charset "utf-8";
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;700;&display=swap");
+
+html {
+  font-size: 16px;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.blind {
+  position: absolute;
+  left: -9999px;
+  overflow: hidden;
+}
+ul {
+  list-style: none;
+}
+a {
+  color: inherit;
+  text-decoration: none;
+}
+.row {
+  max-width: 1289px;
+  border: 0px solid #fff;
+  margin: 0 auto;
+}
+img {
+  max-width: 100%;
+  vertical-align: middle;
+}
+
+.cf::after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+body {
+  font-family: "Noto Sans KR", sans-serif;
+}
+
+#header {
+  background: rgba(0, 0, 0, 0.47);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 99; /* 박스겹침이 발생했을때 겹치는 순서를 제어함. 높은값이 위로 올라옴 */
+}
+#header .row {
+  height: 100px;
+  display: flex;
+  justify-content: space-between;
+  /* align-items: stretch; */
+}
+#header h1 {
+  padding: 0px 0;
+  display: flex;
+  align-items: center;
+}
+#header h1 a {
+  width: 250px;
+  height: 50px;
+  display: block;
+  background: url(../image/워드프레스\ 기업홈페이지1\ 로고.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+#header .menuopen {
+  display: none;
+}
+#header #nav {
+  display: flex;
+}
+/* #header #nav .depth1 { background:pink } */
+#header #nav .depth1 {
+  display: flex;
+}
+#header #nav .depth1 > li {
+  /* float: left; */
+  display: flex;
+  align-items: center;
+
+  margin-left: 48px;
+  color: #fff;
+  font-family: "Noto Sans KR";
+  font-size: 18px;
+  position: relative;
+  border-top: 4px solid transparent;
+}
+
+#header #nav .depth1 > li:hover {
+  color: #45639d;
+  border-top: 4px solid #45639d;
+}
+
+#header #nav .depth1 > li:hover .depth2 {
+  display: block;
+}
+#header #nav .depth2 {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  width: 200px;
+  background: #fff;
+  color: #000;
+  border-top: 3px solid #45639d;
+  display: none;
+}
+#header #nav .depth2 > li > a {
+  display: block;
+  padding: 12px 20px;
+  font-size: 14px;
+  color: #212934;
+}
+#header #nav .depth2 > li > a:hover {
+  background: #f9f9fb;
+}
+
+/* 슬라이더 구역 */
+#section .slideOuter .slideInner {
+  position: relative;
+}
+#section .slideOuter .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 50px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  cursor: pointer;
+}
+#section .slideOuter .slideInner button.slick-next {
+  right: 50px;
+}
+#section .slideOuter .slideInner button.slick-prev {
+  left: 50px;
+  z-index: 999;
+}
+#section .slideOuter .slideInner ul.slick-dots {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  bottom: 50px;
+}
+#section .slideOuter .slideInner ul.slick-dots li {
+  display: inline-block;
+  margin: 0 5px;
+}
+#section .slideOuter .slideInner ul.slick-dots li button {
+  border: none;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  text-indent: 9999px;
+  overflow: hidden;
+  background: #fff;
+  transition: all 0.2s;
+}
+#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+  background: #f00;
+  width: 50px;
+  border-radius: 50px;
+}
+
+/* 슬라이더 자동재생멈춤 버튼 */
+#section .slideOuter {
+  position: relative;
+}
+#section .slideOuter .plapau {
+  position: absolute;
+  bottom: 48px;
+  left: 50%;
+  font-size: 20px;
+  color: #fff;
+  margin-left: 60px;
+}
+
+#section .slide {
+  /* 자식이 부모를 기준으로 배치될때 부모한테 주는 속성 */
+  position: relative;
+}
+#section .slide img {
+  width: 100%;
+}
+#section .slide .text {
+  /* 자식박스를 부모박스 정중앙에 배치시키는 공식 */
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* 자식박스를 부모박스 정중앙에 배치시키는 공식 */
+  width: 100%; /* 자식의 글씨크기가 커서 두줄로 되면 이 속성을 추가함 */
+  color: #fff;
+  text-align: center;
+}
+#section .slide .text h2 {
+  font-size: 5vw;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text h2 {
+  animation: fadeInUp 1s 1 both 0.3s;
+}
+#section .slide .text p {
+  font-size: 22px;
+  margin: 30px 0 80px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+  /* 한글단어잘림 허용 안하는 속성 */
+  word-break: keep-all;
+}
+#section .slick-current.slick-active.slide .text p {
+  animation: fadeInUp 1s 1 both 1.3s;
+}
+#section .slide .text a {
+  display: inline-block;
+  font-size: 17px;
+  color: #58aedd;
+  background: #fff;
+  padding: 15px 35px;
+  border-radius: 50px;
+  opacity: 0;
+  transform: translate3d(0, 100%, 0);
+}
+#section .slick-current.slick-active.slide .text a {
+  animation: fadeInUp 1s 1 both 2.3s;
+}
+
+#section .business ul {
+  /* overflow: hidden; */
+  display: flex;
+}
+#section .business ul li {
+  /* float: left; */
+  /* width: 25%; */
+  flex: 1;
+  text-align: center;
+  height: 600px;
+  padding: 100px 30px;
+}
+#section .business ul li:nth-child(2),
+#section .business ul li:nth-child(4) {
+  background: #edf0f4;
+}
+
+#section .business ul li img {
+  border-bottom: 2px solid rgb(224, 222, 222);
+  padding: 20px 40px;
+  margin-bottom: 50px;
+}
+#section .business ul li h3 {
+  font-size: 30px;
+  color: #333;
+}
+#section .business ul li h3 span {
+  display: block;
+  font-weight: 200;
+  margin: 20px 0 40px;
+}
+#section .business ul li a {
+  font-size: 14px;
+  background: #45639d;
+  color: #fff;
+  padding: 13px 29px;
+  border-radius: 6px;
+  border: 1px solid #45639d;
+  transition: all 0.2s;
+}
+#section .business ul li a:hover {
+  background: #fff;
+  color: #45639d;
+}
+
+#section .product {
+  background: url(../image/product_bg.jpg) center / cover;
+  padding: 100px 0;
+}
+#section .product .row {
+  /* overflow: hidden; */
+  display: flex;
+}
+#section .product .text {
+  /* float: left;
+  width: 50%; */
+  flex: 1;
+  color: #fff;
+}
+#section .product .text h2 {
+  font-size: 70px;
+}
+#section .product .text p {
+  font-size: 24px;
+  margin: 30px 0;
+  line-height: 1.5em;
+}
+#section .product .text .btn a {
+  font-size: 14px;
+  padding: 15px 30px;
+  border: 2px solid #fff;
+  display: inline-block;
+  border-radius: 5px;
+  margin-right: 10px;
+}
+#section .product .text .btn a:nth-child(1) {
+  background: #fff;
+  color: #333;
+}
+#section .product .photo {
+  /* float: left;
+  width: 50%; */
+  flex: 1;
+  text-align: center;
+  padding-top: 70px;
+}
+
+#section .customer {
+  background: #edf0f4;
+  padding: 50px 0;
+}
+#section .customer .row h2 {
+  font-size: 70px;
+  color: #333;
+  text-align: center;
+  margin-bottom: 30px;
+}
+#section .customer .row div {
+  /* overflow: hidden; */
+  display: flex;
+}
+#section .customer .row div span {
+  /* width: 33.33%;
+     float: left; 
+     padding: 0 15px;
+  */
+  flex: 1;
+  margin: 0 15px;
+}
+#section .customer .row div span img {
+  border: 1px solid #ddd;
+}
+
+#footer .address {
+  background: #212934;
+  padding: 30px 0 34px;
+  color: #666;
+  font-size: 16px;
+}
+#footer .address pre {
+  font-family: "Noto Sans KR", sans-serif;
+  line-height: 1.5em;
+  margin: 16px 0;
+}
+#footer .copyright {
+  background: #1d242d;
+  padding: 20px 0;
+  color: rgba(255, 255, 255, 0.66);
+  font-size: 13px;
+}

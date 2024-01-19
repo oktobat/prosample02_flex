@@ -1,0 +1,135 @@
+@media screen and (max-width: 1170px) {
+  .row {
+    max-width: 1170px;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+}
+
+@media screen and (max-width: 990px) {
+  #header {
+    border: 0px solid #000;
+    background: #fff;
+    position: static;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 99;
+  }
+  #header h1 {
+    float: left;
+    border: 0px solid #000;
+    padding: 20px 0;
+  }
+  #header .menuopen {
+    display: block;
+    float: right;
+    font-size: 25px;
+    height: 88.3px;
+    line-height: 88.3px;
+  }
+  #header #nav {
+    float: right;
+    width: 100%;
+    display: block;
+  }
+  #header #nav .depth1 > li {
+    float: none;
+    font-size: 13px;
+    color: #000;
+    font-family: "Noto Sans KR";
+    font-weight: 900;
+    margin-left: 0px;
+    position: relative;
+    border: 0px solid #f00;
+  }
+  #header #nav .depth1 > li > a {
+    height: auto;
+    line-height: 40px;
+    display: block;
+    padding: 0 25px 0 15px;
+    position: relative;
+    border-top: 1px solid #d4d4d4;
+  }
+  #header #nav .depth1 > li:nth-child(1) > a::after,
+  #header #nav .depth1 > li:nth-child(4) > a::after {
+    display: block;
+    position: absolute;
+    top: 2px;
+    right: 10px;
+    font-size: 10px;
+    font-family: "FontAwesome";
+    content: "\f107";
+    opacity: 0.3;
+  }
+  #header #nav .depth1 > li > a:hover {
+    background: rgba(0, 0, 0, 0.03);
+  }
+  #header #nav .depth1 > li:hover .depth2 {
+    display: block;
+  }
+  #header #nav .depth2 {
+    position: static;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    background: #333;
+    color: #fff;
+    font-size: 13px;
+    font-family: "Noto Sans KR";
+    font-weight: 300;
+    display: block;
+  }
+  #header #nav .depth2 > li > a {
+    display: block;
+    padding: 7px 15px;
+    background: rgba(0, 0, 0, 0.05);
+  }
+  #header #nav .depth2 > li > a:hover {
+    display: block;
+    padding: 7px 15px;
+    background: rgba(0, 0, 0, 0.15);
+  }
+  /* 슬라이더 텍스트 */
+  #section .slideOuter .slide .text {
+    top: 50%;
+  }
+  #section .slideOuter .slide .text p {
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 760px) {
+  /* 세계 최고의 글로벌 기업*/
+  #section .ourcompany ul li {
+    float: left;
+    width: 100%;
+    padding: 0 15px;
+    margin-bottom: 40px;
+  }
+  #section .ourcompany ul li img {
+    width: 100%;
+  }
+
+  /* Product 구역 */
+  #section .product ul.best li {
+    float: left;
+    width: 100%;
+    padding: 0 5px;
+    margin-bottom: 40px;
+  }
+
+  /* companyinfo 구역*/
+  #section .companyinfo ul li {
+    float: left;
+    width: 50%;
+    color: #fff;
+    padding: 20px 15px;
+    text-align: center;
+  }
+
+  /* footer 구역 */
+  #footer span {
+    display: block;
+  }
+}
