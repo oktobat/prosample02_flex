@@ -44,9 +44,11 @@ img {
 #header {
   background-color: #fff;
 }
-
+#header .row {
+  display: flex;
+  justify-content: space-between;
+}
 #header .row h1 {
-  float: left;
   padding: 10px 0;
 }
 
@@ -54,12 +56,16 @@ img {
   display: none;
 }
 
-#header .row #nav {
-  float: right;
-}
+/* #header .row #nav {
+} */
 
+#header .row #nav ul.depth1 {
+  /* 자식들을 한줄로 정렬하기 위해 사용했던 float 정렬을 삭제하고
+  부모한테 display:flex 속성 추가함 */
+  display: flex;
+}
 #header .row #nav ul.depth1 > li {
-  float: left;
+  /* float: left; */
   position: relative;
   text-align: center;
   margin-left: 12px;
@@ -222,13 +228,14 @@ img {
 }
 
 #section .about .imagebox {
-  display: block;
+  display: flex;
   width: 100%;
 }
 
 #section .about .imagebox > li {
-  float: left;
-  width: 33.33%;
+  /* float: left; */
+  /* width: 33.33%; */
+  flex: 1;
   padding: 0 16px;
 }
 
@@ -261,20 +268,23 @@ img {
 
 /* ============================================================ */
 #section .creative {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
   padding: 100px 0;
   background: #fafafa;
 }
 #section .creative .videoBox {
-  float: left;
-  width: 50%;
+  /* float: left; */
+  /* width: 50%; */
+  flex: 1;
 }
 #section .creative .videoBox video {
   width: 100%;
 }
 #section .creative .text {
-  float: left;
-  width: 50%;
+  /* float: left; */
+  /* width: 50%; */
+  flex: 1;
   padding: 20px 100px;
 }
 
@@ -317,11 +327,17 @@ img {
   margin: 20px 0 80px;
 }
 #section .business ul {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: left;
+  /* 자식들을 여러줄로 정렬할때 flex-wrap:wrap 속성 추가 */
+  flex-wrap: wrap;
 }
 #section .business ul li {
-  float: left;
-  width: 20%;
+  /* float: left; */
+  /* width: 20%; */
+  border: 1px solid #f00;
+  flex: 0 1 25%;
   padding: 10px;
 }
 #section .business ul li > a {
@@ -366,15 +382,16 @@ img {
   margin-top: -200px;
 }
 #section .contact .row {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
 }
 #section .contact .map {
-  float: left;
-  width: 50%;
+  /* float: left; width: 50%; */
+  flex: 1;
 }
 #section .contact .query {
-  float: left;
-  width: 50%;
+  /* float: left; width: 50%; */
+  flex: 1;
   background: #fff;
   height: 450px;
 }
@@ -386,21 +403,25 @@ img {
   border-top: 1px solid #d4d4d4;
 }
 #footer .row {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
 }
 #footer .btmlogo {
-  float: left;
+  /* float: left; */
 }
 #footer .btmmenu {
-  float: right;
+  /* float: right; */
 }
 #footer .btmmenu {
-  overflow: hidden;
+  /* overflow: hidden; */
+  display: flex;
+  justify-content: space-between;
 }
 #footer .btmmenu .companyinfo {
-  float: left;
+  /* float: left; */
 }
 #footer .btmmenu .sns {
-  float: right;
-  margin-left: 50px;
+  /* float: right; */
+  margin-left: 100px;
 }

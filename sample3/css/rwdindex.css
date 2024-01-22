@@ -12,15 +12,16 @@
   }
   #header .row {
     padding: 0;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
   }
 
   #header .row h1 {
-    float: left;
     padding: 10px 0 10px 50px;
   }
 
   #header .row .menuopen {
-    float: right;
     display: block;
     height: 85px;
     line-height: 85px;
@@ -29,13 +30,15 @@
   }
 
   #header .row #nav {
-    float: right;
     width: 100%;
     display: block;
   }
 
+  #header .row #nav ul.depth1 {
+    display: block;
+  }
+
   #header .row #nav ul.depth1 > li {
-    float: none;
     position: relative;
     text-align: left;
     margin-left: 0px;
@@ -67,7 +70,7 @@
   }
 
   #header .row #nav ul.depth1 > li:hover > ul.depth2 {
-    display: block;
+    display: none;
   }
 
   #header .row #nav ul.depth2 {
@@ -97,26 +100,32 @@
   }
 
   /* about us */
-  #section .about .imagebox > li {
-    float: left;
+  #section .about .imagebox {
+    display: block;
     width: 100%;
+  }
+  #section .about .imagebox > li {
+    /* float: left;
+    width: 100%; */
+    flex: 1;
     padding: 0 16px;
     margin-bottom: 20px;
   }
 
   /* creative best design */
   #section .creative {
-    overflow: hidden;
+    /* overflow: hidden; */
+    display: block;
     padding: 0px 0;
     background: #fafafa;
   }
   #section .creative .videoBox {
-    float: left;
-    width: 100%;
+    /* float: left; width: 100%; */
+    flex: 1;
   }
   #section .creative .text {
-    float: left;
-    width: 100%;
+    /* float: left; width: 100%; */
+    flex: 1;
     padding: 20px 20px;
   }
 
@@ -130,10 +139,9 @@
     line-height: 2em;
     margin: 20px 0 20px;
   }
+
   #section .business ul li {
-    float: left;
-    width: 50%;
-    padding: 10px;
+    flex: 0 1 50%;
   }
 
   #section .business ul li img {
@@ -143,37 +151,42 @@
   }
 
   /* contact 구역 */
+  #section .contact .row {
+    display: block;
+  }
   #section .contact .map {
-    float: left;
-    width: 100%;
+    flex: 1;
   }
   #section .contact .query {
-    float: left;
-    width: 100%;
+    flex: 1;
     background: #fff;
     height: auto;
     padding: 60px 0;
   }
 
   /* footer 구역 */
+  #footer .row {
+    /* overflow: hidden; */
+    display: block;
+    justify-content: space-between;
+  }
   #footer .btmlogo {
-    float: left;
-    width: 100%;
   }
   #footer .btmmenu {
-    float: right;
-    width: 100%;
+    /* overflow: hidden; */
+    display: block;
+    justify-content: space-between;
   }
 
   #footer .btmmenu .companyinfo {
-    float: left;
-    width: 100%;
+    /* float: left;
+    width: 100%; */
     margin: 20px 0;
   }
   #footer .btmmenu .sns {
-    float: right;
-    width: 100%;
-    margin-left: 50px;
+    /* float: right;
+    width: 100%; */
+    margin-left: 0px;
   }
   #footer span {
     display: block;
