@@ -1,6 +1,15 @@
 @charset "utf-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@200;400;700;&display=swap");
 
+header,
+main,
+section,
+article,
+footer,
+nav,
+aside {
+  display: block;
+}
 html {
   font-size: 16px;
 }
@@ -91,14 +100,15 @@ body {
   border-top: 4px solid transparent;
 }
 
-#header #nav .depth1 > li:hover {
+#header #nav .depth1 > li.on {
   color: #45639d;
   border-top: 4px solid #45639d;
 }
-
-#header #nav .depth1 > li:hover .depth2 {
+/*
+#header #nav .depth1 > li.on .depth2 {
   display: block;
 }
+*/
 #header #nav .depth2 {
   position: absolute;
   top: 100%;
@@ -120,10 +130,10 @@ body {
 }
 
 /* 슬라이더 구역 */
-#section .slideOuter .slideInner {
+#section .slideOuter1 .slideInner {
   position: relative;
 }
-#section .slideOuter .slideInner button.slick-arrow {
+#section .slideOuter1 .slideInner button.slick-arrow {
   border: none;
   background: none;
   font-size: 50px;
@@ -132,24 +142,24 @@ body {
   top: 50%;
   cursor: pointer;
 }
-#section .slideOuter .slideInner button.slick-next {
+#section .slideOuter1 .slideInner button.slick-next {
   right: 50px;
 }
-#section .slideOuter .slideInner button.slick-prev {
+#section .slideOuter1 .slideInner button.slick-prev {
   left: 50px;
   z-index: 999;
 }
-#section .slideOuter .slideInner ul.slick-dots {
+#section .slideOuter1 .slideInner ul.slick-dots {
   position: absolute;
   left: 50%;
   transform: translate(-50%);
   bottom: 50px;
 }
-#section .slideOuter .slideInner ul.slick-dots li {
+#section .slideOuter1 .slideInner ul.slick-dots li {
   display: inline-block;
   margin: 0 5px;
 }
-#section .slideOuter .slideInner ul.slick-dots li button {
+#section .slideOuter1 .slideInner ul.slick-dots li button {
   border: none;
   width: 20px;
   height: 20px;
@@ -159,17 +169,17 @@ body {
   background: #fff;
   transition: all 0.2s;
 }
-#section .slideOuter .slideInner ul.slick-dots li.slick-active button {
+#section .slideOuter1 .slideInner ul.slick-dots li.slick-active button {
   background: #f00;
   width: 50px;
   border-radius: 50px;
 }
 
 /* 슬라이더 자동재생멈춤 버튼 */
-#section .slideOuter {
+#section .slideOuter1 {
   position: relative;
 }
-#section .slideOuter .plapau {
+#section .slideOuter1 .plapau {
   position: absolute;
   bottom: 48px;
   left: 50%;
@@ -178,14 +188,14 @@ body {
   margin-left: 60px;
 }
 
-#section .slide {
+#section .slideOuter1 .slide {
   /* 자식이 부모를 기준으로 배치될때 부모한테 주는 속성 */
   position: relative;
 }
-#section .slide img {
+#section .slideOuter1 .slide img {
   width: 100%;
 }
-#section .slide .text {
+#section .slideOuter1 .slide .text {
   /* 자식박스를 부모박스 정중앙에 배치시키는 공식 */
   position: absolute;
   top: 50%;
@@ -196,15 +206,15 @@ body {
   color: #fff;
   text-align: center;
 }
-#section .slide .text h2 {
+#section .slideOuter1 .slide .text h2 {
   font-size: 5vw;
   opacity: 0;
   transform: translate3d(0, 100%, 0);
 }
-#section .slick-current.slick-active.slide .text h2 {
+#section .slideOuter1 .slick-current.slick-active.slide .text h2 {
   animation: fadeInUp 1s 1 both 0.3s;
 }
-#section .slide .text p {
+#section .slideOuter1 .slide .text p {
   font-size: 22px;
   margin: 30px 0 80px;
   opacity: 0;
@@ -212,10 +222,10 @@ body {
   /* 한글단어잘림 허용 안하는 속성 */
   word-break: keep-all;
 }
-#section .slick-current.slick-active.slide .text p {
+#section .slideOuter1 .slick-current.slick-active.slide .text p {
   animation: fadeInUp 1s 1 both 1.3s;
 }
-#section .slide .text a {
+#section .slideOuter1 .slide .text a {
   display: inline-block;
   font-size: 17px;
   color: #58aedd;
@@ -225,10 +235,46 @@ body {
   opacity: 0;
   transform: translate3d(0, 100%, 0);
 }
-#section .slick-current.slick-active.slide .text a {
+#section .slideOuter1 .slick-current.slick-active.slide .text a {
   animation: fadeInUp 1s 1 both 2.3s;
 }
 
+/* 두번째 슬라이드 */
+#section .slideOuter2 {
+  margin: 50px auto;
+  position: relative;
+}
+
+#section .slideOuter2 .slideInner .slide.slick-slide {
+  opacity: 0.6;
+  transform: scale(0.85);
+  padding: 0 10px;
+  transition: all 0.2s;
+}
+#section .slideOuter2 .slideInner .slide.slick-slide.slick-active {
+  opacity: 1;
+}
+#section .slideOuter2 .slideInner .slide.slick-slide.slick-center {
+  transform: scale(1);
+}
+
+#section .slideOuter2 .slideInner button.slick-arrow {
+  border: none;
+  background: none;
+  font-size: 30px;
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#section .slideOuter2 .slideInner button.slick-prev {
+  left: 20px;
+  z-index: 9999;
+}
+#section .slideOuter2 .slideInner button.slick-next {
+  right: 20px;
+}
 #section .business ul {
   /* overflow: hidden; */
   display: flex;

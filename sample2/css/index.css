@@ -42,12 +42,9 @@ img {
   width: 100%;
   z-index: 99;
 }
-#header .row {
-  display: flex;
-  justify-content: space-between;
-}
+/* #header .row {  } */
 #header h1 {
-  /* float: left; */
+  float: left;
   border: 0px solid #000;
   padding: 20px 0;
 }
@@ -55,26 +52,23 @@ img {
   display: none;
 }
 #header #nav {
-  /* float: right; */
-  display: flex;
+  float: right;
 }
-#header #nav .depth1 {
-  display: flex;
-}
+/* #header #nav .depth1 {
+} */
 #header #nav .depth1 > li {
-  /* float: left; */
+  float: left;
   font-size: 14px;
   color: #000;
   font-family: "Noto Sans KR";
   font-weight: 900;
   margin-left: 30px;
   position: relative;
-  display: flex;
-  align-items: center;
 }
 #header #nav .depth1 > li > a {
-  /* height: 88.3px;
-  line-height: 88.3px; */
+  display: block;
+  height: 88.3px;
+  line-height: 88.3px;
   padding: 0 25px 0 15px;
   position: relative;
 }
@@ -92,9 +86,9 @@ img {
 #header #nav .depth1 > li > a:hover {
   background: rgba(0, 0, 0, 0.03);
 }
-#header #nav .depth1 > li:hover .depth2 {
+/* #header #nav .depth1 > li:hover .depth2 {
   display: block;
-}
+} */
 #header #nav .depth2 {
   position: absolute;
   top: 100%;

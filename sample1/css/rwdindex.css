@@ -44,7 +44,6 @@
     margin: 0 10px 20px 0px;
   }
   #header #nav {
-    /* display: block; */
     display: none;
     width: 100%;
   }
@@ -64,7 +63,7 @@
     position: relative;
     border-top: 0px solid transparent;
   }
-  #header #nav .depth1 > li:hover {
+  #header #nav .depth1 > li.on {
     color: #45639d;
     border-top: 0px solid #45639d;
   }
@@ -74,6 +73,9 @@
     border-top: 1px solid #d4d4d4;
     padding-left: 40px;
   }
+  /* #header #nav .depth1 > li.on .depth2 {
+    display: block;
+  } */
   #header #nav .depth2 {
     position: static;
     top: 100%;
@@ -82,7 +84,6 @@
     background: #fff;
     color: #000;
     border-top: 0px solid #45639d;
-    display: block;
   }
   #header #nav .depth2 > li > a {
     display: block;

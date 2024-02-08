@@ -16,40 +16,44 @@
     width: 100%;
     z-index: 99;
   }
-  #header .row {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
+  /* #header .row {
+    
+  } */
   #header h1 {
-    /* float: left; */
+    float: left;
     border: 0px solid #000;
     padding: 20px 0;
   }
   #header .menuopen {
-    display: flex;
+    display: block;
     font-size: 25px;
-    align-items: center;
+    float: right;
+    line-height: 88.3px;
   }
   #header #nav {
-    /* float: right; */
-    display: block;
-    width: 100%;
+    float: none;
+    position: fixed;
+    top: 88.3px;
+    right: 0px;
+    height: 100%;
+    width: 200px;
+    z-index: 99999;
+    background: red;
+    transition: all 0.5s;
   }
-  #header #nav .depth1 {
-    display: block;
-    width: 100%;
+  #header #nav.on {
+    right: 0px;
   }
+
+  /* #header #nav .depth1 {  } */
   #header #nav .depth1 > li {
-    /* float: left; */
+    float: left;
     font-size: 14px;
     color: #000;
     font-family: "Noto Sans KR";
     font-weight: 900;
-    margin-left: 0px;
+    margin-left: 30px;
     position: relative;
-    display: block;
-    align-items: center;
   }
   #header #nav .depth1 > li > a {
     height: auto;
@@ -73,9 +77,9 @@
   #header #nav .depth1 > li > a:hover {
     background: rgba(0, 0, 0, 0.03);
   }
-  #header #nav .depth1 > li:hover .depth2 {
+  /* #header #nav .depth1 > li:hover .depth2 {
     display: block;
-  }
+  } */
   #header #nav .depth2 {
     position: static;
     top: 100%;
@@ -86,7 +90,7 @@
     font-size: 13px;
     font-family: "Noto Sans KR";
     font-weight: 300;
-    display: block;
+    display: none;
   }
   #header #nav .depth2 > li > a {
     display: block;

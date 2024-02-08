@@ -225,6 +225,7 @@ img {
 #section .about .textbox > p {
   font-size: 15px;
   margin: 20px 0 0;
+  word-break: keep-all;
 }
 
 #section .about .imagebox {
