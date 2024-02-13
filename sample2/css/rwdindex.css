@@ -10,7 +10,7 @@
   #header {
     border: 0px solid #000;
     background: #fff;
-    position: static;
+    position: fixed;
     top: 0;
     left: 0;
     width: 100%;
@@ -34,11 +34,12 @@
     float: none;
     position: fixed;
     top: 88.3px;
-    right: 0px;
-    height: 100%;
+    right: -200px;
+    bottom: 0;
     width: 200px;
     z-index: 99999;
-    background: red;
+    background: #fff;
+    overflow-y: auto;
     transition: all 0.5s;
   }
   #header #nav.on {
@@ -47,21 +48,21 @@
 
   /* #header #nav .depth1 {  } */
   #header #nav .depth1 > li {
-    float: left;
+    float: none;
     font-size: 14px;
     color: #000;
     font-family: "Noto Sans KR";
     font-weight: 900;
-    margin-left: 30px;
+    margin-left: 0px;
     position: relative;
   }
   #header #nav .depth1 > li > a {
     height: auto;
     line-height: 40px;
     display: block;
-    padding: 0 25px 0 15px;
+    padding: 0 0 0 20px;
     position: relative;
-    border-top: 1px solid #d4d4d4;
+    border-bottom: 1px solid #d4d4d4;
   }
   #header #nav .depth1 > li:nth-child(1) > a::after,
   #header #nav .depth1 > li:nth-child(4) > a::after {

@@ -83,6 +83,10 @@ img {
   content: "\f107";
   opacity: 0.3;
 }
+#header #nav .depth1 > li:nth-child(1).on > a::after,
+#header #nav .depth1 > li:nth-child(4).on > a::after {
+  content: "\f106";
+}
 #header #nav .depth1 > li > a:hover {
   background: rgba(0, 0, 0, 0.03);
 }
@@ -112,6 +116,9 @@ img {
   background: rgba(0, 0, 0, 0.15);
 }
 
+#section {
+  padding-top: 88.3px;
+}
 #section .slideOuter .slideInner {
   position: relative;
 }
