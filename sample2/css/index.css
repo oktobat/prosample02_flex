@@ -33,6 +33,39 @@ img {
   margin: 0 auto;
 }
 
+.popup {
+  position: fixed;
+  top: 100px;
+  left: 200px;
+  width: 300px;
+  height: 200px;
+  border: 1px solid #f00;
+  z-index: 999999999;
+  background: #fff;
+  padding: 10px;
+  display: none;
+}
+.popup.on {
+  display: block;
+}
+.popup .close {
+  background: #000;
+  color: #fff;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+}
+.popup .close button {
+  background: #fff;
+  color: #000;
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  border: none;
+}
+
 #header {
   border: 0px solid #000;
   background: #fff;
@@ -50,6 +83,14 @@ img {
 }
 #header .menuopen {
   display: none;
+}
+#header .cover {
+  position: fixed;
+  top: 88.3px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.5);
 }
 #header #nav {
   float: right;
